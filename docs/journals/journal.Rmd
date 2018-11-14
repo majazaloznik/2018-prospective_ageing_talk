@@ -1,0 +1,38 @@
+---
+title: "Journal--Template"
+output:
+  pdf_document: default
+---
+ 
+
+This is what my makefile looks like graphically at the minute:
+
+```{r, echo = FALSE, out.width='100%'}
+knitr::include_graphics(paste0(rprojroot::find_root("Makefile"),"/figures/make.png"))
+```
+
+# Monday 12.11.2018
+
+1. Initialise repository.
+
+2. Copy template and start journal
+
+3. Fix Prospective Age repository, there were issues with the code and teh figshare deposit. Now all good. 
+
+# Tuesday 13.11.2018
+
+1. Setup this repo. 
+
+2. Get list of countries for talk!
+
+3. Revamp `00-download.R` and `01-import.R` from the factsheet ones to fit this project. So download the csv file from figshare and then select only the data for the countries we are interested in and save them in the `interim/data`
+
+4. Install xaringan for the slides. bBause Martin and Yihue say so. Read up on what it is: it is a package that lets you render rmardkown by the remark.js library in the web browser. 
+
+5. First read [the remark.js intro](https://remarkjs.com/)
+
+6. Then I apparently need to read the [remark.js Wiki](https://github.com/gnab/remark/wiki), which i have not yet..
+
+7. So xaringan lets you use an rmarkdown file, including code chunks. It knits to html, and you can do gifs, leaflet maps etc that you can't do in pdfs.
+
+8. Start lit-review 

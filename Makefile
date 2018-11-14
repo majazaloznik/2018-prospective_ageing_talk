@@ -96,7 +96,7 @@ endef
 # DEPENDENCIES   ##############################################################
 ###############################################################################
 
-all: journal readme dot reports
+all: journal dot reports
 
 .PHONY: all
 
@@ -121,22 +121,16 @@ $(RPRT)/*.pdf :  $(RPRT)/*.Rmd
 	$(rmd2pdf)
 
 # journals from Rmds ###########################################################
-journal: $(JRN)/journal.html $(JRN)/journal.pdf 
+journal: $(JRN)/journal.html $(JRN)/journal.pdf  
 
 # journal (with graph) render to  pdf
-$(JRN)/journal.pdf:  $(JRN)/journal.Rmd 
+$(JRN)/journal.pdf:  $(JRN)/journal.Rmd $(FIG)/make.png 
 	$(rmd2pdf)
 
 # journal (with graph) render to  html
 $(JRN)/journal.html:  $(JRN)/journal.Rmd 
 	$(rmd2html)
 
-
-# README from Rmds #############################################################
-readme: README.html
-
-README.html: README.md $(FIG)/extract.png
-	$(rmd2html)
 
 # import and subset data #######################################################
 $(DT/I)/pop.rds $(DT/I)/prosp.age.rds: $(CODE)/01-import.R
