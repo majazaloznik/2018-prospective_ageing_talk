@@ -96,7 +96,7 @@ endef
 # DEPENDENCIES   ##############################################################
 ###############################################################################
 
-all: journal dot reports
+all: journal dot reports data
 
 .PHONY: all
 
@@ -120,6 +120,8 @@ reports: $(RPRT)/*.pdf
 $(RPRT)/*.pdf :  $(RPRT)/*.Rmd
 	$(rmd2pdf)
 
+
+
 # journals from Rmds ###########################################################
 journal: $(JRN)/journal.html $(JRN)/journal.pdf  
 
@@ -132,17 +134,38 @@ $(JRN)/journal.html:  $(JRN)/journal.Rmd
 	$(rmd2html)
 
 
-# import and subset data #######################################################
-$(DT/I)/pop.rds $(DT/I)/prosp.age.rds: $(CODE)/01-import.R
+
+
+
+
+data: $(DT/P)/pop.rds $(DT/P)/prop.over.rds $(DT/P)/threshold.1y.rds
+
+
+# clean up abd process data   ##################################################
+$(DT/P)/pop.rds:  $(CODE)/02-transform_data.R
 	Rscript -e "source('$<')"
 
+# dependencies
+$(DT/P)/prop.over.rds $(DT/P)/threshold.1y.rds:  $(CODE)/02-transform_data.R
+	
+# required data for input to 02-transform-data
+$(CODE)/02-transform_data.R: $(DT/I)/pop.rds $(DT/I)/prosp.age.rds
+	touch $@
+	
+# import and subset data #######################################################
+$(DT/I)/pop.rds: $(CODE)/01-import.R
+	Rscript -e "source('$<')"
+
+# dependencies
+$(DT/I)/prosp.age.rds: $(CODE)/01-import.R
+
 # required data for input to 01-import
-$(CODE)/01-import.R: $(DT/R)/2017_prospective-ages.csv
+$(CODE)/01-import.R: $(DT/R)/2017_prospective-ages.csv $(DT/R)/WPP2017_PBSAS.csv 
 	touch $@
 
 # download figshare data 
-$(DT/R)/2017_prospective-ages.csv:  $(CODE)/00-download.R
+$(DT/R)/2017_prospective-ages.csv:  $(CODE)/00-download.R 
 	Rscript -e "source('$<')"
     
-
-
+$(DT/R)/WPP2017_PBSAS.csv:  $(CODE)/00-download.R 
+	touch $@

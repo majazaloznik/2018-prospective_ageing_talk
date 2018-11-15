@@ -16,5 +16,8 @@ file.url <- x$files[[file.number]]$download_url
 download.file(file.url, "data/raw/2017_prospective-ages.csv")
 
 
+# 02. download  WPP 2017 population data ======================================
 
+file.url <- "https://esa.un.org/unpd/wpp/DVD/Files/1_Indicators%20(Standard)/CSV_FILES/WPP2017_PopulationBySingleAgeSex.csv"
+download.file(file.url, "data/raw/WPP2017_PBSAS.csv")
 

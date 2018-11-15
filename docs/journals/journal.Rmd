@@ -36,3 +36,16 @@ knitr::include_graphics(paste0(rprojroot::find_root("Makefile"),"/figures/make.p
 7. So xaringan lets you use an rmarkdown file, including code chunks. It knits to html, and you can do gifs, leaflet maps etc that you can't do in pdfs.
 
 8. Start lit-review 
+
+# Wednesday and Thursday 14. and 15.11.2018
+
+1. Contintue reading. 
+
+2. check that `01-import.R` works correctly for all countries. 
+
+3. also because didn't have the population data for the pyramids, so update the download script (curl in makefile seems to not work on windows)
+
+4. Now `02-transform.R` update, OK.
+
+5. Now the plotting. But it's a bit weird, looks like the code is for an older version of the data, before i gathered it all in one table and had names like `threshold_total`. instead it's still looking for `total`, which doesn't exist.. I can fix this manually now, of course. But where did it happen, given that the poster is fine!?
+

@@ -1,0 +1,139 @@
+---
+title: "Prospective Ageing---Literature review"
+author: mz
+output:
+  pdf_document: default
+bibliography: ../../../Bibliographies/ProspectiveAgeing.bib
+---
+
+Independent discoveries of this principle: @Ryder1975, @Fuchs1984 and @Sanderson2005, also @bayo1981.
+
+@siegel1980 also mentiones Jackson's 1980 Minorities and aging as a source, but haven't been able to get a copy yet. 
+
+This [link here](http://www.iiasa.ac.at/web/home/research/researchPrograms/WorldPopulation/Reaging/Indicators.html) is the IIASA list of their publications and data. 
+
+### Cain1974---*The growing importance of legal age in determining the status of the elderly*
+
+The distinction between the elderly and adults as a special status is first formalised by Bismarck, who got passed in 1899 the Old Age Insurance Law, for which workers were eligible at age 71. 
+
+Cain speaks of the paradox that the more we use chronological age as a legal category delimiter, the more obvious it is that it is indadequate due to differences in maturation and retention of skills, adaptability etc. 
+
+The American Social Security Act of 1935 deifned a distinct legal status for the elderly at age 65. Alhtough the number was not based on any serious analysis or anythnig, it just felt that lower would be too expensive and higher would not get support due to high unemployment levels at the time.
+
+### @Ryder1975---*Notes on stationary populations* 
+
+> "challenged the conventional view in which people are classified as old based on a fixed chronological age. In the study of aging he argued that it would be preferable to consider people as old not based on their chronological ages, but instead on their expected remaining lifetimes." @Sanderson2015
+
+Ryder seems to first come up with the old age threshold, but calls it the *index of old age*:
+
+> "We propose that some arbitrary length of time, such as 10 years, be selected and that we determine at what age the expectation of life is 10 years, that age to be considered the point of entry into old age [...]" @Ryder1975
+
+### siegel1980---*On the demography of Ageing*
+
+This is a presidential address at the Population assiciation of America from 1980. 
+
+Definitions of ageing are not obvious. Cultural deficitions vary; demographers use chronological age, but these require an arbitrary cut off point. An alternative concept is based on the average number of years until death. Here quotes Ryder and Jackson (the book I can't get). 
+
+>"Like average life expectancy, it applies to population groups rather than individuals."
+
+What are the implications of this? Should benefits and privileges of old age be accorded to men and blacks at younger ages than whites and women? Mentions @Cain1974 discussing the use of chronological age vs prospective age in court decisions. 
+
+One issue with *old age based on age at death* is the lack of data. You need life tables for sub-groups of race, gender, even specific health conditions. But nothing else directly relevant in this paper I don't think
+
+
+### @bayo1981---*Equivalent Retirement Ages, 1940-2050* 
+
+Actuarial note by the US Social security administration - office of the Actuary. They propose four measures, one of them (Measure A) is one where the retirement expectancy---time until death really---is kept the same as in the base year. They also have a more 'fair' measure, where they keep the ratio of work and retirement the same. They also say:
+
+> "[These measures] take into account mortality, but do not take into account morbidity. That is, they adjust for the expected length of life spent in retirement, but they ignore the question of qhether that life is spent in a more or less healthy condition."  
+
+One reason is that it is difficult to quantify, the other that it probably correlates with mortality
+
+### @Fuchs1984---*Though much is taken---reflections on ageing, health and medical care*
+
+Quoted in @Sanderson2008 and @Sanderson2015 as an independent discovery of this principle, more elaborate than Ryder.
+
+All literature about ageing starts of with sth on the proportion of people over 65. Why? The assumption is they are not in work, so output must be transferred from the working population to them. Additionally they are less healthy. So the definition of old age is very important. The chronological definition *"is largely a concession to administrative convenience rather than the logical result of a closely reasoned argument."* One alternative would be to look at e.g. people within 5 years of death (but only ones already over 65). Or people over 65 but not in the labour force. These measures focus on the health and transfer payments respectively. 
+
+**Health care utilization**: projected to increase as the age distribution of the elderly is shifting towards older ages and health care utilization increases with age. This assumes the age-spending relationship holds constant over time. **But** this results in an overestimate: *"health care spending among the elderly is not so much a function of time since birth as it is a function of time to death". How much health care will a 75 year old utilize in 10 years time? That depends on medical technology, health care policy etc. but "to the extent that  fewer 75-year-olds will be in the last or next-to-last year of life, a simple extrapolation from past utilization of 75-year olds is inappropriate"*. Mind blown.
+
+This eliminates the age related increases in expenditures as well as teh excell male over female expenditure: *"the only reason why older men use more medical care than older women ant any given age is because a higher proportion of them men are in the last year of their life."* And so because age-specific mortality rates are changing over time, this affects their age-specific health expenditures, they should not simply be applied cross-sectionally. 
+
+So there is not a monotonic relationship between ageing and health care expenditure. And it's not simple anyway, the question is why are the death rates falling: is it because people are living healthier lives? Then convenvional measures will over-estimate their health care costs. But if the reason is more complex technological interventions, then this cost will tend to be offset by the reduced number of people in the end of life. 
+
+**Labour force participation** Man, really hard core declines in the 50s-80s! over 65 they fell from 46% to 19%. WHy!? common answer is health, but scepticism: ill health is just a socially acceptable thing to say. Mandatory retirement and age dicrimination might be another reason. This has to do with contracts that increase your wages, even though your productivity is probably declining. Which should not be called discrimination if the labour is more expensive! Another issue is the number of elderly people. Moving from a pyramid-like structure, which coincides with workplace hierarchies to a more rectangular one: there are fewer senior positions if workplaces if old people stay in the labour force. Social security is a major reason for lower laboru force participation of older men. 
+
+**Income** another interesting point. Older people are better off than ever (this is in the 80s) with social security, but this is an annuity-like income which doesn't come from work or ownership like stocks and bonds or a business. Research shows kids' frequency of visits is proportional to bequeathable wealth, not non-bequeathable wealth: seniors are "better off and feeling worse" as no longer have control over assets. 
+
+### @Sanderson2005---*Average remaining lifetimes can increase as human populations age* (Nature paper)
+
+**Two new measures**: (i) *the standardized median age* (ii) *the rescaled dependency ratio*
+
+*Median age* is the most commonly used measure of population ageing apparenlty. This piece describes the idea of standardizing median ages in some sort of way to account for increased life expectancy, although it does not do a very good job at explaining it intuitively at all... 
+
+> "Here we propose a new measure of ageing: the median age of the population standardized for expected remaining years of life."
+
+So while populations are growing older measured by median age, they can also be growing younger as measured by *standardized median age*. Similarly adjusting the old-age dependency ratio shows ageing is a lot slower than usually though, and at times even reversing. 
+
+
+> "Populaiton ageing differs from the ageing of an individual. People who survive grow older with each year they live. Populations , on the other hand, can grow younger."
+
+A lot of things don't depend on chronological age, but on time left to live e.g. the costs of medical care, retirement, bequests, consumption and the accumulation of capital.
+
+So, using period life tables, you've got the *median age* and the *life expectancy at median age*. The first the age that divides the population into half. And it keeps going up. The lex at median is also the median remaining lex - since half the populaiton has a higher remaining life expectancy (those younger than the median) and the other half a lower remaining lex (those older than the median). 
+
+If median ages stayed the same (e.g. through migration), then remaining lex at the median age would go up---due to increases in longevity. But with the median age also going up, depending on how quickly it is increasing the remaining lex can go up slowly or even reverse. In the latter case the improvemenlty in mortality rates are outweighted by the increased median age. 
+
+An example of this is the projection for Japan 2000 - 2040 where the median age is expected to increase from 41 to 55, while the remaining life expectancy at the median age will fall from 41 to 35. Afterwards the slow down of the median age increase leads to life expectancy at the median to increase as well. Their median age is rising so fast because of low fertility, high life expectancy and little in migration. In the US it is rising slowly, because of high fertility and migration. 
+
+The problem with *life expectancy at median age* is "that it is not directly comparable to the median age itself." That's why we need the *standardized median age* this means **the median age** of the **the life expextancy standardized population**. So you pick a reference year, e.g. 2000, and use that life table to assign people ages that have the same remaining life expextancy as they did in 2000. And then calculate the median age of this standardized population. By definition---if you've used the same country's life table as the reference---the standardized median age will be the same as the median age in the reference year. 
+
+OK, so you take a population age distribution in a certain year, as well as the remaining life expectancies for each age. Then you match those with the remaining life expextancies in the reference year and replace their ages. Still not seeing an intuitive way to comprehend what is happening. So the remaining life expectancy at the standardized median age is now constant---it is the remaining life expectancy at the median age in the reference year. 
+
+
+Then in part II they use @lee2003 rescaling---namely proportional rescaling---to compare the regular old age dependency ratio to one where the start and end of the work phase (20 and 65) rescale proportionally to changes in life expextancy. And it is of course very slow, considerably slower than the sometimes even quadroupling of the standard measure. 
+
+
+### @lee2003---Rescaling the life cycle: Longevity and Proportionality
+
+Referenced in @Sanderson2005 - but unclear, perhaps as the source of the dependency ration idea - rescaling it obviously. 
+
+Speculation about how the life cycle will be modified in response to increased life expectancy. 
+
+**Proportional rescaling** is a convenient benchmark, seems neutral, but there are biological constraints, institutional constraints and *stock-flow* inconsistencies can cause human and physical capital to rise more rapidly than the labour force. Time in retirement is rising faster than longevity, not proportionally. (not sure i get this human capital thing, hopefully later).
+
+*Strong* proportional rescaling affects both the average timings of transitions as well as their disribution. E.g. if the timing of the menopause doubled, the spread around the mean age of menopause would also double. If the variance stayed the same then we call it *weak proportionality*. 
+
+*flow* or *rate* variables are measured per unit of time, and *stock variables are not. Completed fertility, accumulated wealth, probability of every marrying etc. are stocks. Birth, death rates, income etc. are flows. 
+
+Perfectly proportional rescaling means all stocks stay the same (relative to the same % of the life cycle), and the flow variables reduce proportionally. 
+
+In biology the study of proportionla rescaling between species is the study of *biological invariants*. One example is the relationship between age at maturity and expected years of adulhood. Bilogical invariants are teh result of maximisation of reproductive fitness i.e. the forces of natural selection. **But** human's increased longevity is not the result of natural selection, but technological advances, changes in life style, social organization, nutrition etc. So we should not expect the bioogical invariants to apply here necessarily. But then again there seems to be some sort of common underlying biological principle.
+
+Increasing life expectancy is added to different life phases depending on when it happens. When lex is 20 then the majorigy of an additionla year is gained in the 15-65 period (0.7), 0.2 in the 0-15 period and olny 0.1 in the over 65 one. But at lex = 77 the majority, 0.7 is over 65. Historically mortality has declined faster in infancy, but not proportionally with the rescaling. The actual change of mortality is (Fries) *compression of morbidity*. Compare l(x) in 1900 and 1995 for example. l(1) in 1900 = l(59) in 1995!!! That's 5800% increase. Corresponding increases for (l(30), l(60) and l(90) are 137%, 33% and 10%. Under strong proportionality these increases would be the same at all ages. 
+
+"Under proportional stretching of the life cycle the time spent disabled or in ill health would rese in proportion to logevity, as would the time spent free of disability" this is apparenlty confirmed by data i.e. people that live longer are healthier longer, and health costs in old age are more closely related to time until death than to chronological age. This means (see also @Fuchs1984) that (ceteris paribus) increased longevity means fewer persons at any age are about to die, so health costs should go down. So disability and health could be proportional, but could also be shrinking (i.e. *compression of morbidity*)
+
+Ohter things apart from sorvivalship and health and disability that are part of the life cycle for humans are adulthood transitions: educaiton, marriage and onset of childbearing. All are being postoned at a faster pace than the pace of longevity increase. All three are shifting to later ages, but also at different rates, so their interrelationship is changing. Education is also lasting longer, but is also starting faster, which is completely off the proportionality hypothesis, since it is an acceleration in life cycle timing. 
+
+Biologically there is also an acceleration of menarche and physical maturity. But htere is no change in the timing of the menopause. 
+
+**Population level implications of rescaling**: with imperfect proportionlaity where the mean age of reproduction does not change at the same pace as longevity this will affect population size, the overlap of generations and dependency ratios. So if fertility stays the same but longevity increases then populaiton size and number of generations increases and dependency ratio decreases. 
+
+But this also works in the oposite direction: if you have sub-replacememnt fertility then you can rescale old age, e.g. from 65 to 70, to keep pensioners as a constant proportion of the population. 
+
+
+
+**Rescaling and economic behaviour: retirement trends**: quote Kotlikoff (1981)  as proposing two options for dealing with longer life expectancy: rise retirement in proportion with life expectancy or more than in proportion, which would keep the years of retirement constant. In fact age of retirement has been falling - until the end of the 20th century anyway. 
+
+If you look at the ratio of years worked to years in retirement, it used to be .1 in 1900 US and by 1995 it had almost quadroupled to .38
+
+Working hours as a proportion of available hours has declined from 50% to 20% of our lifetime! Of course this is not only to do with longevity, we have more money and leisure is a luxury good. 
+
+Also there are institutional factors leading to early departure from teh labour force: age discrimination, incentives in employer provided defined benefit pensions especially in combination with tax and benefit policies. All of these have lead to early retirement in contradiction to the rescaling of  the life cycle. 
+
+So, in summary: the proportional rescaling of the life-cycle is a convenient baseline. In practice it does not occur, different stages are changing in different direcitons and at non-proportional rates. Thsi is due to behavioural reasons (e.g. more leisure), institutional (incentive s for early retirement) and biological reasons (menopause) because longevity increases are not the results of evolutionary forces that fundamentaly change our biology, so these changes are not accompanied by other biological changes. 
+
+
+
+# References
