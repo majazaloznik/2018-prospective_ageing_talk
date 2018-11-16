@@ -1,0 +1,45 @@
+---
+title: "Prospective Ageing"
+subtitle: "in a few Specially Selected Countries"
+author: "Maja Založnik"
+date: "21.11.2018"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+countIncrementalSlides: false
+---
+
+
+# Outline
+
+
+--
+1. What is population ageing?
+
+
+--
+1. What is *prospective age*?
+
+
+--
+3. Bring it home
+
+---
+
+
+# Japan
+
+```{r echo = FALSE}
+knitr::include_graphics("figures/japan.gif")
+```
+
+---
+
+# Slovenia 
+
+```{r echo = FALSE}
+knitr::include_graphics("figures/Slovenia.gif")
+```
+

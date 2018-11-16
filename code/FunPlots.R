@@ -53,7 +53,7 @@ FunPlotThreshold <- function(country = "Algeria",
                              lwd.grid = 1){
   
   if(write) {
-    postscript(file=here::here(paste0("figures/","threshold-",substr(country, 1,4),".eps")),
+    postscript(file=here::here(paste0("figures/","threshold-",gsub(" ", "_",country),".eps")),
                horiz=FALSE,onefile=FALSE,
                width=width,
                height=height,
@@ -79,25 +79,25 @@ FunPlotThreshold <- function(country = "Algeria",
   # background lines
   threshold.1y %>% 
     split(., .$location) %>% 
-    lapply( function(x) lines(x$time, x$total, lwd = 3, col = col.20))
+    lapply( function(x) lines(x$time, x$threshold_total, lwd = 3, col = col.20))
   lines(c(1980, 2050), c(65,65), col = "gray50", lty = 3, lwd = 2)
   
   # total
   threshold.1y %>% 
     filter(location == country) %>% 
-    lines(total ~ time, . ,
+    lines(threshold_total ~ time, . ,
           lwd = 3, col = col.total )
   
   # men
   threshold.1y %>% 
     filter(location == country) %>% 
-    lines(male ~ time, . ,
+    lines(threshold_male ~ time, . ,
           lwd = 3, col = col.male, lty = "63")
   
   #women
   threshold.1y %>% 
     filter(location == country) %>% 
-    lines(female ~ time, . ,
+    lines(threshold_female ~ time, . ,
           lwd = 3, col = col.female, lty = "63")
   
   

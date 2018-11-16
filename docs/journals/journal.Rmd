@@ -1,6 +1,8 @@
 ---
 title: "Journal--Template"
 output:
+  html_document:
+    df_print: paged
   pdf_document: default
 ---
  
@@ -48,4 +50,24 @@ knitr::include_graphics(paste0(rprojroot::find_root("Makefile"),"/figures/make.p
 4. Now `02-transform.R` update, OK.
 
 5. Now the plotting. But it's a bit weird, looks like the code is for an older version of the data, before i gathered it all in one table and had names like `threshold_total`. instead it's still looking for `total`, which doesn't exist.. I can fix this manually now, of course. But where did it happen, given that the poster is fine!?
+
+# Friday 16.11.2018
+
+1. OK, let's try if we can get gganimate to work.. So a few things have been learned:
+
+* use `anim_save()` to save gif
+* use `animate(p, fps = 10,  renderer = gifski_renderer(loop = FALSE))` to control the speed and to make sure the gif doens't loop, which is what you usually want in a presentation
+* use another `geom_line()` with another data to get a 'background' to the plot i.e. stuff that doesn't move. 
+* Also in `animate()` use width and height to control aspect ratio and resolution - the default seems to be 480x480 
+
+2. OK, let's try a test presentations. Hmm, seems to be some issues with the location of the gif files so here::here() does not work 
+
+3. OK, think i've figured out the order in ggplot allows me to do the animation over the background lines. 
+
+4. Now more ggplot stuff:
+
+* ensure the limits are the same
+* increase font size 
+* different linetypes and sizes `scale_size_manual(values=c(1, 1.5))` and scale_linetype_manual())`
+
 
