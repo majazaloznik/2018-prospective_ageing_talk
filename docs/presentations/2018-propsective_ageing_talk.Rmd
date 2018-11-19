@@ -12,6 +12,7 @@ countIncrementalSlides: false
 ---
 
 
+
 # Outline
 
 
@@ -28,18 +29,89 @@ countIncrementalSlides: false
 
 ---
 
-
-# Japan
-
-```{r echo = FALSE}
-knitr::include_graphics("figures/japan.gif")
-```
-
----
-
-# Slovenia 
+### Slovenia: Old-age threshold
 
 ```{r echo = FALSE}
 knitr::include_graphics("figures/Slovenia.gif")
 ```
 
+---
+
+### Slovenia: Proportion "old"
+
+```{r echo = FALSE}
+knitr::include_graphics("figures/proportions_65_Slovenia.gif")
+```
+
+---
+
+### Slovenia 
+
+```{r echo = FALSE}
+knitr::include_graphics("figures/proportions_threshold_Slovenia.gif")
+```
+
+---
+
+### Belarus 
+
+```{r echo = FALSE}
+knitr::include_graphics("figures/Belarus.gif")
+```
+
+---
+### China
+
+```{r echo = FALSE}
+knitr::include_graphics("figures/China.gif")
+```
+---
+
+### Georgia
+
+```{r echo = FALSE}
+knitr::include_graphics("figures/Georgia.gif")
+```
+
+---
+### Italy 
+
+```{r echo = FALSE}
+knitr::include_graphics("figures/Italy.gif")
+```
+
+---
+ 
+### Japan
+
+```{r echo = FALSE}
+knitr::include_graphics("figures/Japan.gif")
+```
+
+---
+### Korea
+
+```{r echo = FALSE}
+knitr::include_graphics("figures/Republic of Korea.gif")
+```
+
+---
+### Spain
+
+```{r echo = FALSE}
+knitr::include_graphics("figures/Spain.gif")
+```
+
+---
+### United Kingdom
+
+```{r echo = FALSE}
+knitr::include_graphics("figures/United Kingdom.gif")
+```
+
+---
+### United States of America
+
+```{r echo = FALSE}
+knitr::include_graphics("figures/United States of America.gif")
+```

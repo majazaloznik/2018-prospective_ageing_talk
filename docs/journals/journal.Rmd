@@ -71,3 +71,37 @@ knitr::include_graphics(paste0(rprojroot::find_root("Makefile"),"/figures/make.p
 * different linetypes and sizes `scale_size_manual(values=c(1, 1.5))` and scale_linetype_manual())`
 
 
+5. OK,  clean up the charts a bit more, I need to 
+* remove the legend 
+* make the labels larger
+* make the main line thicker
+* wrap it in a function and  pick color scheme back/grey vs red/black
+
+6. Now clean up files and makefile! All works great!
+
+7. Also:
+* reduce xlim to more reasonable 1980-2050
+* add vertical line at 2015
+
+8. ToDo: 
+
+* add animated 65 line? or points at intersections
+* Ssth wrong with gif files with spaces in them - not being picked up in xaringan
+
+# Monday 19.11.2018
+
+1. Maybe just add a 65 line simple
+
+2. OK, now proportions over 65. Try to add extra label next to male and female labels. 
+
+3. Also, how do i get the first set of lines to stay in the background for the second one. Turns out the trick of just adding a second dataset to a new geom_line works only if the transition variables have a different name, otherwise the `transition_reveal` thing works on both sets. I think I have got it now though. 
+
+4. OK, let's try pyramids... This is tricky.. 
+
+* Age Grp is character and has 80+ in there.. 
+* can I make over 65 and over threshold a different colour?
+* OK, got that, but how do i also add the threshold being a different colour - which changes every year for men and women obvs. 
+* still something wrong with Belarus, how can the individual male and femaleproportion over thresholds both be higher than the total over threshold
+* and why do the pyramid plots all end at 2030!? 
+
+

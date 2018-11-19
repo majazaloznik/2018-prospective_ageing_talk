@@ -136,5 +136,7 @@ So, in summary: the proportional rescaling of the life-cycle is a convenient bas
 
 ### @DAlbis2013 - *Age groups and the measure of Population ageing*
 
-Start off with Ryder's @Ryder1975 idea of using the number of years left to live, which was then pursued by @Sanderson2005
+Start off with Ryder's @Ryder1975 idea of using the number of years left to live, which was then pursued by @Sanderson2005. The problem with this approach is that at any time you do not know an individual's life expectancy, but have to use life tables to estimate it. The second problem is that proportional rescaling affects it: if life expectancy increases all else remaining equal, then the proportion over the threshold gets smaller. Is this a problem? So under prospective age in a stationary population with a rectangular survival curve, an increase in longevity would meant the population is getting younger. 
+
+
 # References

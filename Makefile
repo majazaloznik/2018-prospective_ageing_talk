@@ -8,6 +8,7 @@ DATA:= $(DIR)/data
 
 FIG:= $(DIR)/figures
 
+
 DT/P:= $(DATA)/processed
 DT/R:= $(DATA)/raw
 DT/I:= $(DATA)/interim
@@ -15,13 +16,12 @@ DT/I:= $(DATA)/interim
 DOC:= $(DIR)/docs
 JRN:= $(DOC)/journals
 RPRT:= $(DOC)/reports
+PREZ:= $(DOC)/presentations
+GIF:= $(PREZ)/figures
 
 # FILES #######################################################################
-# plot  files
-FIG/plots := $(FIG)/pyramid*.eps $(FIG)/prop*.eps $(FIG)/thresh*.eps
-
-# maps files
-FIG/maps := $(FIG)/map*.eps
+# gif files for presentation
+gifz:= $(GIF)/*.gif 
 
 # all interim data filee
 DT/I/.rds :=  $(DT/I)/*.rds
@@ -29,11 +29,7 @@ DT/I/.rds :=  $(DT/I)/*.rds
 # all processed files
 DT/P/.rds := $(DT/P)/*.rds
 
-# poster filename
-POSTER := $(DIR)/docs/presentations/PH14.02.Factsheet
 
-# final human readable data 
-RESULTS := $(DIR)/results/human-readable/final.data.csv
 
 # COMMANDS ####################################################################
 # recipe to make .dot file  of this makefile
@@ -67,6 +63,15 @@ define rmd2html
 	render('$<', output_dir = '$(@D)', output_format = 'html_document',\
 	quiet = TRUE )"
 endef 
+
+# recipe to knit xaringan presentation from first prerequisite
+define rmd2xaringan
+	@echo creating the $(@F) file by knitting it in R.---------------------------
+  Rscript -e "suppressWarnings(suppressMessages(require(rmarkdown))); \
+	render('$<', output_dir = '$(@D)', output_format = 'xaringan::moon_reader',\
+	quiet = TRUE )"
+endef 
+
 
 # recipe run latex with bibtex
 define tex2dvi
@@ -133,14 +138,20 @@ $(JRN)/journal.pdf:  $(JRN)/journal.Rmd $(FIG)/make.png
 $(JRN)/journal.html:  $(JRN)/journal.Rmd 
 	$(rmd2html)
 
+prezi: $(PREZ)/2018-propsective_ageing_talk.html
 
+# journal (with graph) render to  html
+$(PREZ)/2018-propsective_ageing_talk.html:  $(PREZ)/2018-propsective_ageing_talk.Rmd $(gifz)
+	$(rmd2xaringan)
 
+# make gifs ##################################################
+$(gifz):  $(CODE)/03-plotting.R
+	Rscript -e "source('$<')"
 
+# required data and fucntions for input to 03-plotting.R
+$(CODE)/03-plotting.R: $(DT/P)/pop.rds $(DT/P)/prop.over.rds $(DT/P)/threshold.1y.rds $(CODE)/FunPlots.R
 
-
-data: $(DT/P)/pop.rds $(DT/P)/prop.over.rds $(DT/P)/threshold.1y.rds
-
-
+	
 # clean up abd process data   ##################################################
 $(DT/P)/pop.rds:  $(CODE)/02-transform_data.R
 	Rscript -e "source('$<')"
