@@ -49,4 +49,22 @@ lapply(unique(prop.over$location),
 
 
 
+lapply(unique(prop.over$location),
+       function(x)  
+         FunPlotPyramid65(country = x,
+                          col.bkg = "black",
+                          col.65 = "cadetblue",
+                          col.main = "darkgoldenrod1",
+                          lwd.bkg = 1,
+                          time.start = 1980,
+                          time.end = 2015))
 
+lapply(unique(prop.over$location),
+       function(x)  
+         FunPlotPyramid65(country = x,
+                          col.bkg = "black",
+                          col.65 = "cadetblue",
+                          col.main = "darkgoldenrod1",
+                          lwd.bkg = 1,
+                          time.start = 2015,
+                          time.end = 2050))

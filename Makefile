@@ -21,7 +21,7 @@ GIF:= $(PREZ)/figures
 
 # FILES #######################################################################
 # gif files for presentation
-gifz:= $(GIF)/*.gif 
+gifz:= $(GIF)/Slovenia.gif # $(wildcard $(GIF)/*.gif)
 
 # all interim data filee
 DT/I/.rds :=  $(DT/I)/*.rds
@@ -101,7 +101,7 @@ endef
 # DEPENDENCIES   ##############################################################
 ###############################################################################
 
-all: journal dot reports data
+all: journal dot reports data prezi
 
 .PHONY: all
 

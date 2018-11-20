@@ -46,7 +46,7 @@ FunPlotThreshold <- function(country = "Slovenia",
     transition_reveal(group, time) -> p
   
   animate(p, fps = 10,  renderer = gifski_renderer(loop = FALSE),width = 1000, height = 600)
-  anim_save(paste0("docs/presentations/figures/", country, ".gif"))
+  anim_save(paste0("docs/presentations/figures/", gsub(" ","_",country), ".gif"))
 }
 
 
@@ -96,7 +96,7 @@ FunPlotProportions <- function(country = "Slovenia",
     geom_segment(aes(xend = 2052, yend = prop_over_65), linetype = 2, colour = 'grey') +
     transition_reveal(group, time) -> p
   animate(p, fps = 10,  renderer = gifski_renderer(loop = FALSE),width = 1000, height = 600)
-  anim_save(paste0("docs/presentations/figures/proportions_65_", country, ".gif"))
+  anim_save(paste0("docs/presentations/figures/proportions_65_", gsub(" ","_",country), ".gif"))
   
   
   prop.over %>% 
@@ -135,18 +135,20 @@ FunPlotProportions <- function(country = "Slovenia",
     transition_reveal(group, time) -> p
   
   animate(p, fps = 10,  renderer = gifski_renderer(loop = FALSE),width = 1000, height = 600)
-  anim_save(paste0("docs/presentations/figures/proportions_threshold_", country, ".gif"))
+  anim_save(paste0("docs/presentations/figures/proportions_threshold_", gsub(" ","_",country), ".gif"))
 }
 
 
 FunPlotPyramid65 <- function(country = "Slovenia",
                              col.bkg = "black",
-                             col.65 = "black",
-                             col.main = "red",
-                             lwd.bkg = 1) {
+                             col.65 = "cadetblue",
+                             col.main = "darkgoldenrod1",
+                             lwd.bkg = 1,
+                             time.start = 1980,
+                             time.end = 2015) {
   pop %>% 
     filter(location == country) %>% 
-    filter(time >= 1980 & time <= 2050) %>% 
+    filter(time >= time.start & time <= time.end) %>% 
     gather(key = group, value = proportion, 4:5) %>% 
     separate(group, into = c("delete", "sex")) %>% 
     select (-delete) %>% 
@@ -164,22 +166,23 @@ FunPlotPyramid65 <- function(country = "Slovenia",
   
   ggplot(data) +
     geom_bar(aes(AgeGrp, proportion, group = over_threshold, colour = over_threshold, fill = over_threshold),
-             stat = "identity",subset(data,data$sex=="female"))+
+             stat = "identity",subset(data,data$sex=="female"), width = 0.4)+
     geom_bar(aes(AgeGrp,-proportion,group = over_threshold,  colour = over_threshold, fill = over_threshold),
-             stat = "identity",subset(data,data$sex=="male"))+
-    coord_flip() +
-    geom_vline(xintercept=65, colour = "yellow", size = 1.4, linetype = "longdash") +
+             stat = "identity",subset(data,data$sex=="male"), width = 0.4)+
+    coord_flip(ylim = c(-1,1), clip = 'off') +
+    geom_vline(xintercept=65, colour = "red", size = 1, linetype = "longdash") +
     geom_hline(yintercept=0, colour = "white", size = 1) +
-    
+    geom_text(aes(y = -1.13, x = 65, label = "65", vjust = .5), size = 5, hjust = 0, colour = "red") +
     geom_text(aes(x = 100, y = 1, label = time), size = 6, hjust = 1) +
-    scale_fill_manual(values=c("black", "red"), guide = FALSE)+
-    scale_colour_manual(values=c("black", "red"), guide = FALSE)+
+    scale_fill_manual(values=c(col.65,col.main), guide = FALSE)+
+    scale_colour_manual(values=c(col.65, col.main), guide = FALSE)+
     theme_minimal() +
     labs( y = "Percent of population", x = "Age") +
     scale_y_continuous(breaks=seq(-1,1,0.5),labels=abs(seq(-1,1,.5)))  +
     transition_states(time, transition_length = 1, state_length = 1) -> p
   
-  animate(p, fps = 50,  renderer = gifski_renderer(loop = FALSE),width = 1000, height = 600)
-  anim_save(paste0("docs/presentations/figures/pyramid_65_", country, ".gif"))
+  animate(p, fps = 10,  renderer = gifski_renderer(loop = FALSE),width = 1000, height = 600)
+  anim_save(paste0("docs/presentations/figures/pyramid_65_", gsub(" ","_",country),"_",
+                   time.start,"-",time.end,".gif"))
 }
 

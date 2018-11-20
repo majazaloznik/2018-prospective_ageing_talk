@@ -5,6 +5,7 @@ digraph G {
 	"dot" -> "all"
 	"reports" -> "all"
 	"data" -> "all"
+	"prezi" -> "all"
 	".PHONY"
 	"all" -> ".PHONY"
 	"dot"

@@ -134,6 +134,75 @@ Also there are institutional factors leading to early departure from teh labour 
 
 So, in summary: the proportional rescaling of the life-cycle is a convenient baseline. In practice it does not occur, different stages are changing in different direcitons and at non-proportional rates. Thsi is due to behavioural reasons (e.g. more leisure), institutional (incentive s for early retirement) and biological reasons (menopause) because longevity increases are not the results of evolutionary forces that fundamentaly change our biology, so these changes are not accompanied by other biological changes. 
 
+### sanderson2006 
+
+*Historical examples from Sweden and England and Wales. *
+
+Medial age is a common measure of population ageing. You can also look at the prospective median age of a population relative to some standard year. So, 1800 to 1944, Sweden looks like constant, slightly falling median age until 1900, then slow, then faster increase. But both period and cohort based prospective median ages had been falling constantly until 1920 when started to rise a bit. Over the period as a whole prospective median age fell by 9 years, while the retrospective median rose by 8 years. 
+
+*Population ageing in the future*---forcasts mortality rates, create period and cohort life tables and calculate teh propspective median ages. The alternative is based on which mortality rate trend they use, the UN one or the one where it's .2 years increase of life expectancy per year. But in both cases the medians are similar regardless of the type of life table. 
+
+*Recent history of ageing in developend countries*---how is prospective median age a useful complement to median age in studying populaiton agien. Well, you have to pick a population/year as a standard and that then allows you to compare countris over time. *"Because of increasing life expectancies, prospective median ages rise less rapidly than median ages."*
+
+*age as a twodimensional concept*
+
+**Old-age dependency ratios** are great for looking at retirement and burden of public pensions. But using 65 as the onset of 'old age dependency' has become outdated, and will become more and more so. So Prospective Old Age Dependency Ration POADR is defined using a standard year and then the prospective age of 65. They seem to generally rise at half the speed of conventional dependency ratios. They also seem to peak and then reverse, which never happens with conventional ones. 
+
+Conventional measures provide an incomplete picture of ageing and can result in poorly designed policies. Intead of backward looking measures they propose to supplement it with a forward looking measure.
+
+
+### @lutz2008coming---*The coming acceleration of global population ageing*
+
+Nature paper - summarizing their spiel?
+
+So, first the motivation. Then they suggest three alternative measures to the conventional measures: 
+
+* prop over 60 vs prop over RLE15 (quoting Ryder as suggesting a similar measure). 
+* median age vs. prospective median age (standardized to the year 2000)
+* average age vs population average remaining years of life (the weighted average of age-specific remaining life expectancies) - which is from Hersch 1944, also mentioned in @sanderson2006
+
+So basiclaly all three measures that are adjusted for longevity show a slower increase. The speed at which these three are increasing peaks before 2035 then slows down. 
+
+Then last bit of the paper is abotu their probabilistic projections used, so not really about prospective ageing. Ironically the last figure is the predicted distributions of people over 80, haha. But their point is that there is loads of disagreement amongst scientists about trends in mortality in the future, especially in old age. And apparently the UN variants only look at fertility uncertainty, which leads to gross underestimation of the uncertaintly of future proportions of elderly. 
+
+Overall: ageing levels are changing, but speed is also important for adaption. And it will be accelerating for the coming decades (until 2035 or so) before slowing. down. 
+
+
+### @Sanderson2008---*Rethinking Age and Ageing*
+
+> "*In contrast to the growth of interest in and concern about population ageing, the concepts used in analyzing it have remained static.*"
+
+60-year-old in 1800 and 2000. 
+
+Even the media has picked this up; "40 is the new 30" etc. 
+
+**The concept of age** Increases in life expectancy are not taken into account in common measures of ageing: proportion over 65 and old-age dependency ratio, both use the chronological age 65. They innovatively suggest we all have two ages: chronological age and prospective age based on remaining life expectancy. 
+
+So conventional demography is making the unjustified assumption that improvements in health and longevity can be disregarded when looking at ageing. 
+
+1984 Fuchs suggested people have nominal and real ages: nominal is the chronological age at current prices, and real is the inflation adjusted, prospective age. Although he never actually said that. In 2005 then Sanderson and Scherbov independently come up with this idea. 
+
+OK, chart explaining prospective age, and explanation is here:
+
+1. We start with a french woman born in 1922, which means that in 1952 she is 30 years old. In that year the priod life expectancy for a 30 year old was 44.7. 
+2. Now let's take another 30-year old woman, this time in 2005. She has also survived 30 years and her life expectancy is 54.4 years. Both womean have a retrospective age of 30 years. 
+
+But are they really the same age? The second one has almost ten years longer to live. 
+
+3. Now let's look at the same woman in 1952 again. She has 44.7 years to live. Now starting from the other end: who has the same remaining life expectancy in 2005? 
+
+4. French women with 44.7 years left to live in 2005 were exactly 40 years old. 
+
+So looking this end, the 30-year old and the 40-year old have the same remaining life expectancy, so the prospective age of the 40-year old in 2005 is actually 30 if we use 1952 as the reference year.
+
+Then there's the inflation analogy.
+
+So, prospective age is important because it affects how people live their lives and plan for the future,a nd how pension plans are designed. 
+
+**Defining old Age**
+
+
+
 ### @DAlbis2013 - *Age groups and the measure of Population ageing*
 
 Start off with Ryder's @Ryder1975 idea of using the number of years left to live, which was then pursued by @Sanderson2005. The problem with this approach is that at any time you do not know an individual's life expectancy, but have to use life tables to estimate it. The second problem is that proportional rescaling affects it: if life expectancy increases all else remaining equal, then the proportion over the threshold gets smaller. Is this a problem? So under prospective age in a stationary population with a rectangular survival curve, an increase in longevity would meant the population is getting younger. 

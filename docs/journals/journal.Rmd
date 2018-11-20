@@ -104,4 +104,26 @@ knitr::include_graphics(paste0(rprojroot::find_root("Makefile"),"/figures/make.p
 * still something wrong with Belarus, how can the individual male and femaleproportion over thresholds both be higher than the total over threshold
 * and why do the pyramid plots all end at 2030!? 
 
+5. So the plots can be split into 1980-2015 and 2015-2050, that seems to solve the stopping at 2030, although someone has posted a similar issue, so i'm not going crazy at least, might fix it some other time. [https://github.com/thomasp85/tweenr/issues/14](here) 
 
+6. Also, Belarus is fine, just weird: It's because there are separate thresholds and the proportions over the threshold are of women and of men. So there can actually be a situation where there are proportions of men and proportions of women are both higher than the proportion of both over a common threshold, since that common threshold is quite a bit closer to the women's.. 
+
+# Tuesday 20/11/2018
+
+1. OK, breaking the populaiton pyramid into two changes the xlim, need to set it manually.
+
+2. Change colurs, add red 65, etc, all good now, plot all pyramid gifs. 
+
+3. Add to presentation. 
+
+4. Fix spaces in file names. 
+
+5. Fix makefile
+
+6. All gifs in presentation. 
+
+7. Read Sanderson 2006
+
+8. Read Sanderson 2008
+
+9. Make prospective barchart. 
