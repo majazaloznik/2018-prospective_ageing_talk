@@ -127,3 +127,9 @@ knitr::include_graphics(paste0(rprojroot::find_root("Makefile"),"/figures/make.p
 8. Read Sanderson 2008
 
 9. Make prospective barchart. 
+
+# Wednesday 21.11.2018
+
+1. rearrange the countries
+
+2. get ranking data. 

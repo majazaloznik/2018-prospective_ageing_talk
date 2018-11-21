@@ -72,6 +72,13 @@ One thing to note is that individual level ageing only goes one way, but populai
 
 
 So, what is wrong with using *chronological age* to measure ageing?
+???
+It assumes that a 60 year old person in 1800 is just as old as a 60-year old person in 2000, just because they have lived the same number of years. But have they aged at the same rate? 
+Well, in 1800 only 25% of men survived to the age of 60, while today that number is over 90 %. So clearly the answer is no, thewe two 60 year-olds are not the same at all. One is middle aged and one is elderly. 
+
+At this point I will skip the standard thing that everyone does when they present here, so I won't actually talk directly about the increases in life expectancy and assume you know it's pretty much going up just about everyhwere. 
+
+But this is the point: chronological age does not take into account changes in life excpectancy. 
 --
 <br>
 <br>
@@ -92,14 +99,7 @@ What else has grown?
 --
 <span style="color:red">Life expectancy!</span>
 
-???
 
-It assumes that a 60 year old person in 1800 is just as old as a 60-year old person in 2000, just because they have lived the same number of years. But have they aged at the same rate? 
-Well, in 1800 only 25% of men survived to the age of 60, while today that number is over 90 %. So clearly the answer is no, thewe two 60 year-olds are not the same at all. One is middle aged and one is elderly. 
-
-At this point I will skip the standard thing that everyone does when they present here, so I won't actually talk directly about the increases in life expectancy and assume you know it's pretty much going up just about everyhwere. 
-
-But this is the point: chronological age does not take into account changes in life excpectancy. 
 ---
 
 # Prospective age
@@ -112,12 +112,15 @@ plot(1, xlim = c(0,100),
      xlab = "", ylab = "")
 
 text(-5, 5.5, "1952", xpd = TRUE)
-rect(10,5, 40, 6, col = "cornsilk3")
+rect(10,5, 40, 6, col = "cadetblue")
 text(25, 5.5, "30 years lived")
-rect(40,5, 84.7, 6, col = "darkgoldenrod2")
+rect(40,5, 84.7, 6, col = "cornsilk3")
 text(60, 5.5, "remaining life expectancy: 44.7")
 
 ```
+???
+1. We start with a french woman born in 1922, which means that in 1952 she is 30 years old. In that year the priod life expectancy for a 30 year old was 44.7. 
+
 
 ---
 
@@ -131,17 +134,21 @@ plot(1, xlim = c(0,100),
      xlab = "", ylab = "")
 
 text(-5, 5.5, "1952", xpd = TRUE)
-rect(10,5, 40, 6, col = "cornsilk3")
+rect(10,5, 40, 6, col = "cadetblue")
 text(25, 5.5, "30 years lived")
-rect(40,5, 84.7, 6, col = "darkgoldenrod2")
+rect(40,5, 84.7, 6, col = "cornsilk3")
 text(60, 5.5, "remaining life expectancy: 44.7")
 text(-5, 4.5, "2005", xpd = TRUE)
-rect(10,4, 40, 5, col = "cornsilk3")
+rect(10,4, 40, 5, col = "cadetblue")
 text(25, 4.5, "30 years lived")
-rect(40,4, 94.4, 5, col = "darkgoldenrod2")
+rect(40,4, 94.4, 5, col = "cornsilk3")
 text(60, 4.5, "remaining life expectancy: 54.4")
 
 ```
+???
+
+2. Now let's take another 30-year old woman, this time in 2005. She has also survived 30 years and her life expectancy is 54.4 years. Both womean have a retrospective age of 30 years. 
+
 
 ---
 
@@ -167,6 +174,11 @@ text(60, 4.5, "remaining life expectancy: 54.4")
 
 arrows(10, 3.8, 40, 3.8, length = .15, lwd = 3, col = "red")
 ```
+??? 
+Both womean have a retrospective age of 30 years. 
+
+But are they really the same age? The second one has almost ten years longer to live. 
+
 
 ---
 
@@ -199,6 +211,10 @@ rect(40,2, 84.7, 3, col = "darkgoldenrod2")
 text(60, 2.5, "remaining life expectancy: 44.7")
 
 ```
+???
+
+3. Now let's look at the same woman in 1952 again. She has 44.7 years to live. Now starting from the other end: who has the same remaining life expectancy in 2005? 
+
 
 ---
 
@@ -237,6 +253,12 @@ rect(0, 1, 40, 2, col = "cornsilk3")
 text(20, 1.5, "40 years lived")
 
 ```
+???
+
+4. French women with 44.7 years left to live in 2005 were exactly 40 years old. 
+
+So looking this end, the 30-year old and the 40-year old have the same remaining life expectancy, so the prospective age of the 40-year old in 2005 is actually 30 if we use 1952 as the reference year.
+
 ---
 
 # Prospective age
@@ -275,6 +297,9 @@ text(20, 1.5, "40 years lived")
 
 arrows(84.7, 0.8, 40, 0.8, length = .15, lwd = 3, col = "red")
 ```
+???
+
+So looking this end, the 30-year old and the 40-year old have the same remaining life expectancy, so the prospective age of the 40-year old in 2005 is actually 30 if we use 1952 as the reference year.
 
 
 ---
@@ -296,6 +321,8 @@ Similarly if we look at chronological age the median age - the age where half th
 ---
 # Defining old age
 
+--
+
 * fixed age threshold: 
 
     + UK - Friendly Societies Act (1875): "any age after 50"
@@ -308,139 +335,69 @@ Similarly if we look at chronological age the median age - the age where half th
 
 * remaining life expectancy threshold:
 
-    + Ryder (1975): 10 years left
+    + Ryder (1975): *index of old age* 10 years left
 
     + Siegel (1993): 10 or 15 years left
     
-    + Sanderson and Scherbov (2008): 15 years left
+    + Sanderson and Scherbov (2008): 15 years left - $RLE_{15}$ 
     
     
 ???
 Not necessarily the best way: we could look at a host of physical, environmental, psychological and other factors, but we just don't have enough informaiton to do sth like this. This has the advantage of simplicity and data availability
 ---
 
-# Prospective ageing in Specially selected countries
+# Prospective ageing in specially selected countries 1980-2050
 
-* Old age threshold: 15 years remaining life expectancy
-* 
+* Old age threshold: 15 years remaining life expectancy - $RLE_{15}$
 
-### Slovenia: Old-age threshold
+--
+
+* Population pyramid with $RLE_{15}$
+
+--
+
+* Proportion of the population over 65 vs proportion over $RLE_{15}$
+
+
+---
+
+### Korea: Old-age threshold
 
 ```{r echo = FALSE}
-knitr::include_graphics("figures/Slovenia.gif")
+knitr::include_graphics("figures/Republic_of_Korea.gif")
 ```
 
 ---
 
-### Slovenia: Population pyramid
+### Korea: Population pyramid
 
 ```{r echo = FALSE}
-knitr::include_graphics("figures/pyramid_65_Slovenia_1980-2015.gif")
+knitr::include_graphics("figures/pyramid_65_Republic_of_Korea_1980-2015.gif")
 ```
 ---
 
-### Slovenia: Population pyramid
+### Korea: Population pyramid
 
 ```{r echo = FALSE}
-knitr::include_graphics("figures/pyramid_65_Slovenia_2015-2050.gif")
-```
-
----
-
-### Slovenia: Proportion "old"
-
-```{r echo = FALSE}
-knitr::include_graphics("figures/proportions_65_Slovenia.gif")
+knitr::include_graphics("figures/pyramid_65_Republic_of_Korea_2015-2050.gif")
 ```
 
 ---
 
-### Slovenia: Proportion "old"
+### Korea: Proportion "old"
 
 ```{r echo = FALSE}
-knitr::include_graphics("figures/proportions_threshold_Slovenia.gif")
+knitr::include_graphics("figures/proportions_65_Republic_of_Korea.gif")
 ```
 
 ---
 
-
-
-### Belarus: Old-age threshold
+### Korea: Proportion "old"
 
 ```{r echo = FALSE}
-knitr::include_graphics("figures/Belarus.gif")
+knitr::include_graphics("figures/proportions_threshold_Republic_of_Korea.gif")
 ```
 
----
-
-### Belarus: Population pyramid
-
-```{r echo = FALSE}
-knitr::include_graphics("figures/pyramid_65_Belarus_1980-2015.gif")
-```
----
-
-### Belarus: Population pyramid
-
-```{r echo = FALSE}
-knitr::include_graphics("figures/pyramid_65_Belarus_2015-2050.gif")
-```
-
----
-
-### Belarus: Proportion "old"
-
-```{r echo = FALSE}
-knitr::include_graphics("figures/proportions_65_Belarus.gif")
-```
-
----
-
-### Belarus: Proportion "old"
-
-```{r echo = FALSE}
-knitr::include_graphics("figures/proportions_threshold_Belarus.gif")
-```
-
----
-
-
-### China: Old-age threshold
-
-```{r echo = FALSE}
-knitr::include_graphics("figures/China.gif")
-```
-
----
-
-### China: Population pyramid
-
-```{r echo = FALSE}
-knitr::include_graphics("figures/pyramid_65_China_1980-2015.gif")
-```
----
-
-### China: Population pyramid
-
-```{r echo = FALSE}
-knitr::include_graphics("figures/pyramid_65_China_2015-2050.gif")
-```
-
----
-
-### China: Proportion "old"
-
-```{r echo = FALSE}
-knitr::include_graphics("figures/proportions_65_China.gif")
-```
-
----
-
-### China: Proportion "old"
-
-```{r echo = FALSE}
-knitr::include_graphics("figures/proportions_threshold_China.gif")
-```
 
 
 ---
@@ -481,6 +438,43 @@ knitr::include_graphics("figures/proportions_65_Georgia.gif")
 
 ```{r echo = FALSE}
 knitr::include_graphics("figures/proportions_threshold_Georgia.gif")
+```
+
+### China: Old-age threshold
+
+```{r echo = FALSE}
+knitr::include_graphics("figures/China.gif")
+```
+
+---
+
+### China: Population pyramid
+
+```{r echo = FALSE}
+knitr::include_graphics("figures/pyramid_65_China_1980-2015.gif")
+```
+---
+
+### China: Population pyramid
+
+```{r echo = FALSE}
+knitr::include_graphics("figures/pyramid_65_China_2015-2050.gif")
+```
+
+---
+
+### China: Proportion "old"
+
+```{r echo = FALSE}
+knitr::include_graphics("figures/proportions_65_China.gif")
+```
+
+---
+
+### China: Proportion "old"
+
+```{r echo = FALSE}
+knitr::include_graphics("figures/proportions_threshold_China.gif")
 ```
 
 
@@ -525,6 +519,45 @@ knitr::include_graphics("figures/proportions_threshold_Italy.gif")
 
 ---
 
+### Belarus: Old-age threshold
+
+```{r echo = FALSE}
+knitr::include_graphics("figures/Belarus.gif")
+```
+
+---
+
+### Belarus: Population pyramid
+
+```{r echo = FALSE}
+knitr::include_graphics("figures/pyramid_65_Belarus_1980-2015.gif")
+```
+---
+
+### Belarus: Population pyramid
+
+```{r echo = FALSE}
+knitr::include_graphics("figures/pyramid_65_Belarus_2015-2050.gif")
+```
+
+---
+
+### Belarus: Proportion "old"
+
+```{r echo = FALSE}
+knitr::include_graphics("figures/proportions_65_Belarus.gif")
+```
+
+---
+
+### Belarus: Proportion "old"
+
+```{r echo = FALSE}
+knitr::include_graphics("figures/proportions_threshold_Belarus.gif")
+```
+
+---
+
 ### Japan: Old-age threshold
 
 ```{r echo = FALSE}
@@ -562,43 +595,44 @@ knitr::include_graphics("figures/proportions_65_Japan.gif")
 knitr::include_graphics("figures/proportions_threshold_Japan.gif")
 ```
 
+
 ---
 
-### Korea: Old-age threshold
+###  United States of America: Old-age threshold
 
 ```{r echo = FALSE}
-knitr::include_graphics("figures/Republic_of_Korea.gif")
+knitr::include_graphics("figures/United_States_of_America.gif")
 ```
 
 ---
 
-### Korea: Population pyramid
+###  United States of America: Population pyramid
 
 ```{r echo = FALSE}
-knitr::include_graphics("figures/pyramid_65_Republic_of_Korea_1980-2015.gif")
+knitr::include_graphics("figures/pyramid_65_United_States_of_America_1980-2015.gif")
 ```
 ---
 
-### Korea: Population pyramid
+###  United States of America: Population pyramid
 
 ```{r echo = FALSE}
-knitr::include_graphics("figures/pyramid_65_Republic_of_Korea_2015-2050.gif")
-```
-
----
-
-### Korea: Proportion "old"
-
-```{r echo = FALSE}
-knitr::include_graphics("figures/proportions_65_Republic_of_Korea.gif")
+knitr::include_graphics("figures/pyramid_65_United_States_of_America_2015-2050.gif")
 ```
 
 ---
 
-### Korea: Proportion "old"
+###  United States of America: Proportion "old"
 
 ```{r echo = FALSE}
-knitr::include_graphics("figures/proportions_threshold_Republic_of_Korea.gif")
+knitr::include_graphics("figures/proportions_65_United_States_of_America.gif")
+```
+
+---
+
+###  United States of America: Proportion "old"
+
+```{r echo = FALSE}
+knitr::include_graphics("figures/proportions_threshold_United_States_of_America.gif")
 ```
 
 
@@ -682,63 +716,23 @@ knitr::include_graphics("figures/proportions_threshold_United_Kingdom.gif")
 
 ---
 
-### Spain: Old-age threshold
-
-```{r echo = FALSE}
-knitr::include_graphics("figures/Spain.gif")
+# Rankings - Proportion over 65
+```{r, echo = FALSE}
+final <- readRDS("final.rds")
+knitr::kable(final[,c(1,2,5,6)], format = 'html', digits = 2,
+             col.names = c("2018", "prop > 65",
+                           "2050", "prop > 65"),
+             row.names = TRUE)
 ```
 
 ---
 
-### Spain: Population pyramid
+# Rankings - Proportion over RLE_15 
 
-```{r echo = FALSE}
-knitr::include_graphics("figures/pyramid_65_Spain_1980-2015.gif")
+```{r, echo = FALSE}
+final <- readRDS("final.rds")
+knitr::kable(final[,c(3,4,7,8)], format = 'html', digits = 2,
+             col.names = c("2018", "prop > RLE_15",
+                           "2050", "prop > RLE_15"),
+             row.names = TRUE)
 ```
----
-
-### Spain: Population pyramid
-
-```{r echo = FALSE}
-knitr::include_graphics("figures/pyramid_65_Spain_2015-2050.gif")
-```
-
----
-
-### Spain: Proportion "old"
-
-```{r echo = FALSE}
-knitr::include_graphics("figures/proportions_65_Spain.gif")
-```
-
----
-
-###  United States of America: Old-age threshold
-
-```{r echo = FALSE}
-knitr::include_graphics("figures/United_States_of_America.gif")
-```
-
----
-
-###  United States of America: Population pyramid
-
-```{r echo = FALSE}
-knitr::include_graphics("figures/pyramid_65_United_States_of_America_1980-2015.gif")
-```
----
-
-###  United States of America: Population pyramid
-
-```{r echo = FALSE}
-knitr::include_graphics("figures/pyramid_65_United_States_of_America_2015-2050.gif")
-```
-
----
-
-###  United States of America: Proportion "old"
-
-```{r echo = FALSE}
-knitr::include_graphics("figures/proportions_65_United_States_of_America.gif")
-```
-

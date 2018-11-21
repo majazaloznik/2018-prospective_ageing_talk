@@ -134,7 +134,37 @@ Also there are institutional factors leading to early departure from teh labour 
 
 So, in summary: the proportional rescaling of the life-cycle is a convenient baseline. In practice it does not occur, different stages are changing in different direcitons and at non-proportional rates. Thsi is due to behavioural reasons (e.g. more leisure), institutional (incentive s for early retirement) and biological reasons (menopause) because longevity increases are not the results of evolutionary forces that fundamentaly change our biology, so these changes are not accompanied by other biological changes. 
 
-### sanderson2006 
+### @sanderson2006-*A new persoective on population ageing*
+
+Summarises the standardized age they introduced in 2005, which they now start calling prospective age. 
+
+Recognizing two different ages: 
+
+* chronological or retrospecitve age
+* prospective age, forward looking
+
+Many behaviours depend on the number of years left! Which ones?
+
+E.g. saving and investment, acquisition of education, certain medical procedures and other individual behaviours, but also important socially e.g. medical expenditures are especially high in the last year of life: if this is happening at later and later years, then this will lead to estimates of expenditures that are too high if you only look at retrospective age. 
+
+>"Prospective age also helps in assessing future policies condernign the age at the enetitlement to a full public pension. BY computing the prospective age at the current entitlement age and holidng it constant in population forecasts we demarcate the border between policies that allow an increase in the expected number of years of pension receipt and those that do not."
+
+And they don't say to stop using chronological age, just to supplement it with this one as well. 
+
+Distinction between individuals and populations: Individuals can only get older one year per year. Populations can grow older faster or grow younger. But then when you use two different measurements, they can also grow older by one measure and younger by another. 
+
+OK, first tey will describe it etc. Then technical: you would naturally want to use cohort life tables, that's the expected remaining life expectancy: the *cohort life expectancy*, but period life tables are much more widely available. SO next step is to figure out if they produce the same results, which would allow us to use period tables whenever they are available. 
+
+Then a historical comparison of both types of ages for England and Sweden and some other comparisons. And finally another definition of the age dependency ratio - using the prosceptive age of 65, whatever that means?
+
+Hmm, this is awkward, they use prospective age, which is defined with reference to an index age, and another option is to use years of life remaining, which they recognize Ryder had already come up with in 1975.
+
+Another contribution anticipating this came up in 1944 by Hersch, who talked of *potential life years*.
+
+Hmm, ok, they say prospective age is better than RLE, since it is generally insensitive to whether or not is is computed using period or cohort life tables, which is not the case with remaining life expectancy. Do I get this? No.  I mean kinda.. 
+
+OK, nice analogy with regard to why both period and cohort life tables result in similar prospective age caluclations: like translating a paragraph into german and then back or into french and then back. In the end they are very similar, even though the translation intermeiate step was quite different. 
+
 
 *Historical examples from Sweden and England and Wales. *
 
@@ -201,7 +231,21 @@ So, prospective age is important because it affects how people live their lives 
 
 **Defining old Age**
 
+Ryder et al suggested this already, defining old age as a threshold after which people have a certain number of years left to live has its faults, but it's simple and we have data to measure it. 
 
+*Proportion of elderly* Globally: prop over 65 looks like we've been ageing since 1955, while prop over rle15 looks like it;s been getting younger until aroun 85, then stable until 2015 and only growing older now.
+
+*Old-age dependency ratio* and prospective OADR. The latter is way less extreme than the former, changes the ranking of ageing countries dramatically.
+
+*Median age* - in order to calculate the prospective median age you need to use a standard life table, which you don't need for the other two. 
+
+Ranking by POADR and OADR changes, I need to do that for prop over 65/RLE15
+
+*New thinking applied to policy*: Older people are more active today than they were in previous generations. The oldest person to climb Mt everest was 80 years old. None of the standard measures adjust for increases in life expectancy. How do we take prospective age into account in policy?
+
+* fixed chronological retirement age is not fair on younger generations. But of course a fixed prospective retirement age is not fair on older generations: they would work longer and longer and get the same number of years of benefits. S&S suggest averaging them - which is silly, obviously you do another measure which keeps the proportion constant.. This was in Fuchs, was it not?
+* Formulating policies based on prospective ages is important also if life expectancy gains reverse. 
+* The argument has been made that an older electorate will lead to more short-termism, but that's ignoring the increase in life expectancy. So increased median ages can actually be decreases in prospective median age, which means a longer time horizon. 
 
 ### @DAlbis2013 - *Age groups and the measure of Population ageing*
 

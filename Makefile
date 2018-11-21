@@ -141,9 +141,14 @@ $(JRN)/journal.html:  $(JRN)/journal.Rmd
 prezi: $(PREZ)/2018-propsective_ageing_talk.html
 
 # journal (with graph) render to  html
-$(PREZ)/2018-propsective_ageing_talk.html:  $(PREZ)/2018-propsective_ageing_talk.Rmd $(gifz)
+$(PREZ)/2018-propsective_ageing_talk.html:  $(PREZ)/2018-propsective_ageing_talk.Rmd $(gifz) $(PREZ)/final.rds
 	$(rmd2xaringan)
 
+
+# get ranking data ##################################################
+$(PREZ)/final.rds:  $(CODE)/04-ranking.R
+	Rscript -e "source('$<')"
+	
 # make gifs ##################################################
 $(gifz):  $(CODE)/03-plotting.R
 	Rscript -e "source('$<')"
