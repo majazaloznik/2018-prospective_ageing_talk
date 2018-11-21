@@ -133,3 +133,23 @@ knitr::include_graphics(paste0(rprojroot::find_root("Makefile"),"/figures/make.p
 1. rearrange the countries
 
 2. get ranking data. 
+
+3. Try to deploy on github pages - hmm, not working? rename file to index. html doesn't do the trick. tried cloning https://github.com/tcgriffith/xaringan_gh, but didn't fork it or sth, god i hate git. Hopefully it will work ok from the usb. AAW, it worked! just took some time ;)
+
+4. Update makefile
+
+5. Try to get github pages to work from same repo, so don't have to copy anything. Add index.html into top docs folder. 
+
+6. Add notes to presentation.
+
+7. Wrap up for the moment:
+
+* add readme with a few gifs. Actually make some gifsfor this purpose that loop.
+* add loop argument to plot functions. 
+* add location argument to plot functions
+* touch gif files to make make uptodate. 
+
+8. ToDo list
+
+* figure out why the population pyramids didn't work 1980-2050, but needed fewer years?
+* 

@@ -14,7 +14,9 @@
 FunPlotThreshold <- function(country = "Slovenia",
                              col.bkg = "gray",
                              col.main = "black",
-                             lwd.bkg = 1) {
+                             lwd.bkg = 1,
+                             loop = FALSE,
+                             prezi = TRUE) {
   # subset data                             
   threshold.1y %>% 
     filter(location == country) %>% 
@@ -45,8 +47,9 @@ FunPlotThreshold <- function(country = "Slovenia",
     geom_segment(aes(xend = 2052, yend = threshold), linetype = 2, colour = 'grey') +
     transition_reveal(group, time) -> p
   
-  animate(p, fps = 10,  renderer = gifski_renderer(loop = FALSE),width = 1000, height = 600)
-  anim_save(paste0("docs/presentations/figures/", gsub(" ","_",country), ".gif"))
+  animate(p, fps = 10,  renderer = gifski_renderer(loop = loop),width = 1000, height = 600)
+  if (prezi) {anim_save(paste0("docs/presentations/figures/", gsub(" ","_",country), ".gif"))} else{
+    anim_save(paste0("figures/", gsub(" ","_",country), ".gif"))}
 }
 
 
@@ -69,7 +72,9 @@ FunPlotProportions <- function(country = "Slovenia",
                                col.bkg = "black",
                                col.65 = "black",
                                col.main = "red",
-                               lwd.bkg = 1) {
+                               lwd.bkg = 1,
+                               prezi = TRUE,
+                               loop = FALSE) {
     prop.over %>% 
     filter(location == country) %>% 
     filter(time >= 1980 & time <= 2050) %>% 
@@ -95,8 +100,9 @@ FunPlotProportions <- function(country = "Slovenia",
     geom_text(aes(x = 2062, label = rep(c("","Over","65"), each = 71)), size = 6, hjust = 0) +
     geom_segment(aes(xend = 2052, yend = prop_over_65), linetype = 2, colour = 'grey') +
     transition_reveal(group, time) -> p
-  animate(p, fps = 10,  renderer = gifski_renderer(loop = FALSE),width = 1000, height = 600)
-  anim_save(paste0("docs/presentations/figures/proportions_65_", gsub(" ","_",country), ".gif"))
+  animate(p, fps = 10,  renderer = gifski_renderer(loop = loop),width = 1000, height = 600)
+  if (prezi) {anim_save(paste0("docs/presentations/figures/proportions_65_", gsub(" ","_",country), ".gif"))} else {
+    anim_save(paste0("figures/proportions_65_", gsub(" ","_",country), ".gif"))}
   
   
   prop.over %>% 
@@ -134,8 +140,9 @@ FunPlotProportions <- function(country = "Slovenia",
     geom_segment(aes(xend = 2052, yend = prop_over_threshold), linetype = 2, colour = 'grey') +
     transition_reveal(group, time) -> p
   
-  animate(p, fps = 10,  renderer = gifski_renderer(loop = FALSE),width = 1000, height = 600)
-  anim_save(paste0("docs/presentations/figures/proportions_threshold_", gsub(" ","_",country), ".gif"))
+  animate(p, fps = 10,  renderer = gifski_renderer(loop = loop),width = 1000, height = 600)
+  if (prezi) {anim_save(paste0("docs/presentations/figures/proportions_threshold_", gsub(" ","_",country), ".gif"))} else {
+    anim_save(paste0("figures/proportions_threshold_", gsub(" ","_",country), ".gif"))}
 }
 
 
@@ -145,7 +152,9 @@ FunPlotPyramid65 <- function(country = "Slovenia",
                              col.main = "darkgoldenrod1",
                              lwd.bkg = 1,
                              time.start = 1980,
-                             time.end = 2015) {
+                             time.end = 2015, 
+                             loop = FALSE,
+                             prezi = TRUE) {
   pop %>% 
     filter(location == country) %>% 
     filter(time >= time.start & time <= time.end) %>% 
@@ -181,8 +190,10 @@ FunPlotPyramid65 <- function(country = "Slovenia",
     scale_y_continuous(breaks=seq(-1,1,0.5),labels=abs(seq(-1,1,.5)))  +
     transition_states(time, transition_length = 1, state_length = 1) -> p
   
-  animate(p, fps = 10,  renderer = gifski_renderer(loop = FALSE),width = 1000, height = 600)
-  anim_save(paste0("docs/presentations/figures/pyramid_65_", gsub(" ","_",country),"_",
-                   time.start,"-",time.end,".gif"))
+  animate(p, fps = 10,  renderer = gifski_renderer(loop = loop),width = 1000, height = 600)
+  if (prezi) {anim_save(paste0("docs/presentations/figures/pyramid_65_", gsub(" ","_",country),"_",
+                   time.start,"-",time.end,".gif"))} else {
+                     anim_save(paste0("figures/pyramid_65_", gsub(" ","_",country),"_",
+                                      time.start,"-",time.end,".gif"))}
 }
 

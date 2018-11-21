@@ -21,7 +21,11 @@ GIF:= $(PREZ)/figures
 
 # FILES #######################################################################
 # gif files for presentation
-gifz:= $(GIF)/Slovenia.gif # $(wildcard $(GIF)/*.gif)
+gifz:= $(GIF)/Slovenia.gif #$(wildcard $(GIF)/*.gif)
+
+# gif files for readme
+readme_gifs:= $(FIG)/Belarus.gif #$(wildcard $(FIG)/*.gif)
+
 
 # all interim data filee
 DT/I/.rds :=  $(DT/I)/*.rds
@@ -101,7 +105,7 @@ endef
 # DEPENDENCIES   ##############################################################
 ###############################################################################
 
-all: journal dot reports data prezi
+all:  readme journal dot reports prezi
 
 .PHONY: all
 
@@ -118,13 +122,18 @@ $(DT/P)/make.dot: $(DIR)/Makefile
 	@$(make2dot)
 
 
+# README from Rmds #############################################################
+readme: README.html
+
+README.html: README.md $(readme_gifs)
+	$(rmd2html)
+	
 # reports from Rmds ###########################################################
 reports: $(RPRT)/*.pdf 
 
 # journal (with graph) render to  pdf
 $(RPRT)/*.pdf :  $(RPRT)/*.Rmd
 	$(rmd2pdf)
-
 
 
 # journals from Rmds ###########################################################
@@ -152,6 +161,9 @@ $(PREZ)/final.rds:  $(CODE)/04-ranking.R
 # make gifs ##################################################
 $(gifz):  $(CODE)/03-plotting.R
 	Rscript -e "source('$<')"
+
+# dependencies
+$(readme_gifs): $(CODE)/03-plotting.R
 
 # required data and fucntions for input to 03-plotting.R
 $(CODE)/03-plotting.R: $(DT/P)/pop.rds $(DT/P)/prop.over.rds $(DT/P)/threshold.1y.rds $(CODE)/FunPlots.R

@@ -68,3 +68,31 @@ lapply(unique(prop.over$location),
                           lwd.bkg = 1,
                           time.start = 2015,
                           time.end = 2050))
+
+
+## 04. plots for readme
+
+FunPlotThreshold(country = "Belarus",
+         col.bkg = "black",
+         col.main = "black",
+         lwd.bkg = 0.5,
+         loop = TRUE,
+         prezi = FALSE)
+
+FunPlotPyramid65(country = "Belarus",
+                 col.bkg = "black",
+                 col.65 = "cadetblue",
+                 col.main = "darkgoldenrod1",
+                 lwd.bkg = 1,
+                 time.start = 1980,
+                 time.end = 2050,
+                 prezi = FALSE,
+                 loop = TRUE)
+
+FunPlotProportions("Japan",
+                   col.bkg = "black",
+                   col.65 = "black",
+                   col.main = "red",
+                   lwd.bkg = 0.5,
+                   prezi = FALSE,
+                   loop = TRUE)
