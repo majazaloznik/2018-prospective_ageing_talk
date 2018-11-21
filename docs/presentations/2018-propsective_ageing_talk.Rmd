@@ -42,6 +42,14 @@ And finally we will bring it home: by which I mean that we'll have a look at how
 ---
 
 # Measuring Ageing
+???
+On the individual level we usually speak of ageing chronologically, you grow one year older every year. Of course there are other ways of looking at age here, how old you look or how old you feel, but those are subjective, and let's stick with objective, demographic measures. 
+
+On the Populaiton level there are a few standard measures that are commonly used: these are the proportion of the population in old age, the old age dependency ratio and the median age. 
+
+One thing to note is that individual level ageing only goes one way, but population level ageing can go both ways: a population can grow younger. 
+
+**But more importantly: all of these measures use chronological age. **
 
 --
 
@@ -67,14 +75,6 @@ And finally we will bring it home: by which I mean that we'll have a look at how
 
     + median age
   
-???
-On the individual level we usually speak of ageing chronologically, you grow one year older every year. Of course there are other ways of looking at age here, how old you look or how old you feel, but those are subjective, and let's stick with objective, demographic measures. 
-
-On the Populaiton level there are a few standard measures that are commonly used: these are the proportion of the population in old age, the old age dependency ratio and the median age. 
-
-One thing to note is that individual level ageing only goes one way, but population level ageing can go both ways: a population can grow younger. 
-
-**But more importantly: all of these measures use chronological age. **
 
 
 ---
@@ -502,6 +502,8 @@ knitr::include_graphics("figures/proportions_65_Georgia.gif")
 ```{r echo = FALSE}
 knitr::include_graphics("figures/proportions_threshold_Georgia.gif")
 ```
+
+---
 
 ### China: Old-age threshold
 
