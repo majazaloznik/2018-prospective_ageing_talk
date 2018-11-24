@@ -178,6 +178,8 @@ Medial age is a common measure of population ageing. You can also look at the pr
 
 **Old-age dependency ratios** are great for looking at retirement and burden of public pensions. But using 65 as the onset of 'old age dependency' has become outdated, and will become more and more so. So Prospective Old Age Dependency Ration POADR is defined using a standard year and then the prospective age of 65. They seem to generally rise at half the speed of conventional dependency ratios. They also seem to peak and then reverse, which never happens with conventional ones. 
 
+!!Important. Here they are defining POADR using a standard year, e.g. starting in 2000 and the retrospective age of 65, then calculate the prospective age in other years and just use that to calculate the dependency ratio. And not to use e.g. RLE15 as the threshold of old age. In the 2008 paper they redefine it as the latter though @Sanderson2008.
+
 Conventional measures provide an incomplete picture of ageing and can result in poorly designed policies. Intead of backward looking measures they propose to supplement it with a forward looking measure.
 
 
@@ -235,7 +237,7 @@ Ryder et al suggested this already, defining old age as a threshold after which 
 
 *Proportion of elderly* Globally: prop over 65 looks like we've been ageing since 1955, while prop over rle15 looks like it;s been getting younger until aroun 85, then stable until 2015 and only growing older now.
 
-*Old-age dependency ratio* and prospective OADR. The latter is way less extreme than the former, changes the ranking of ageing countries dramatically.
+*Old-age dependency ratio* and prospective OADR. The latter is way less extreme than the former, changes the ranking of ageing countries dramatically. POADR is redefined here compared to the 2006 paper (@sanderson2006), where it was defined prospectively like the median age, with reference to a standard year. Now it is simply based on the old-age threshold. 
 
 *Median age* - in order to calculate the prospective median age you need to use a standard life table, which you don't need for the other two. 
 
@@ -247,9 +249,17 @@ Ranking by POADR and OADR changes, I need to do that for prop over 65/RLE15
 * Formulating policies based on prospective ages is important also if life expectancy gains reverse. 
 * The argument has been made that an older electorate will lead to more short-termism, but that's ignoring the increase in life expectancy. So increased median ages can actually be decreases in prospective median age, which means a longer time horizon. 
 
+"Perhaps the most innovative feature of our approach is that we think about people as simultaneously having two ages. " 
+
+>*Hm, what about thinking about people as having a relative age instead, instead of being 65 years old and 15 left to live, how about having 18 percent left to live? So instead of two absolute ages, have a single relative age.* me.
+
+
 ### @DAlbis2013 - *Age groups and the measure of Population ageing*
 
+Not sure where i found this paper?
+
 Start off with Ryder's @Ryder1975 idea of using the number of years left to live, which was then pursued by @Sanderson2005. The problem with this approach is that at any time you do not know an individual's life expectancy, but have to use life tables to estimate it. The second problem is that proportional rescaling affects it: if life expectancy increases all else remaining equal, then the proportion over the threshold gets smaller. Is this a problem? So under prospective age in a stationary population with a rectangular survival curve, an increase in longevity would meant the population is getting younger. 
+
 
 
 # References

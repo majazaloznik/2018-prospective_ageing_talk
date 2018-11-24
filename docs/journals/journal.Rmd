@@ -142,7 +142,9 @@ knitr::include_graphics(paste0(rprojroot::find_root("Makefile"),"/figures/make.p
 
 6. Add notes to presentation.
 
-7. Wrap up for the moment:
+7. Wrap up for the 
+
+moment:
 
 * add readme with a few gifs. Actually make some gifsfor this purpose that loop.
 * add loop argument to plot functions. 
@@ -153,3 +155,18 @@ knitr::include_graphics(paste0(rprojroot::find_root("Makefile"),"/figures/make.p
 
 * figure out why the population pyramids didn't work 1980-2050, but needed fewer years?
 * 
+
+# 22.11.2018 
+
+* Do charts for Ukraine for Katia
+
+# Saturday 24.11.2018
+
+* SHould i write a blog post. It has to mention the figshare data. Should that have dependency ratios as well as just thresholds and proportions over?
+
+* OK, idea: How about comparing three different types of age measurement:
+
+* chronological age. standard, sure. 65 is old or whatever. (absolute from front)
+* prospective age. S&S version. RLE15 is old. (absolute from back)
+* relative age. 15:65 for example. keep it constant as definition of old age. 
+* relative no2: keep the ratio of the areas under the survival curve constant. So the ratio of years lived young and old stays the same :D.
